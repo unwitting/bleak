@@ -1,3 +1,29 @@
 {
-  
+  "name": "bleak",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "description": "An in-your-face theme for the Ghost blogging platform",
+  "author": "Jack Preston <unwttng@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "repository": "https://github.com/unwitting/bleak"
+  },
+  "bugs": {
+    "url": "https://github.com/unwitting/bleak/issues"
+  },
+  "keywords": ["ghost", "theme", "blog", "blogging"],
+  "scripts": {
+
+    "compile": "npm run compile-css",
+    "watch": "npm run compile && npm run watch-css",
+
+    "ensure-css": "mkdir -p assets/css",
+    "compile-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style compressed src/scss/",
+    "watch-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style compressed --watch src/scss/"
+
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  }
 }
