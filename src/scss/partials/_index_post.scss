@@ -1,0 +1,31 @@
+.post {
+
+  text-align: right;
+
+  @include mq-horizontal-layout {
+    color: white;
+
+    padding: 2rem 2rem;
+
+    transition: border 0.25s ease-in-out;
+    border-right: 1rem solid rgba(0, 0, 0, 0);
+    &:hover {
+      border-right: 1rem solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  @include mq-vertical-layout {
+    padding: 1rem 1rem;
+    border-top: 1px solid white;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: lowercase;
+  }
+
+  .excerpt {
+    font-weight: 200;
+  }
+
+}

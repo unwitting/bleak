@@ -1,0 +1,51 @@
+@import "partials/media_queries";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  @include mq-vertical-layout {
+    flex-direction: column;
+    .sidebar-wrapper, .content-wrapper {
+      width: 100%;
+    }
+  }
+
+  @include mq-horizontal-layout {
+    flex-direction: row-reverse;
+    .content-wrapper {
+      flex: 3;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+    .sidebar-wrapper {
+      flex: 1;
+      max-width: 350px;
+      height: 100vh;
+      .sidebar {
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+@include mq-vertical-layout {
+  // For posts, the post title etc should come first and the sidebar / logo
+  // etc should tail it
+  .post-template .layout {
+    flex-direction: column-reverse;
+  }
+}
+
+@import "partials/sidebar";

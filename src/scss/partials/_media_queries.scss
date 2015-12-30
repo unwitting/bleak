@@ -1,0 +1,31 @@
+$max-vertical-layout-width-portrait: 605px;
+$max-horizontal-layout-width-landscape: 605px;
+
+@mixin layout-detect($layout-name) {
+  .layout-detector:after {
+    content: $layout-name;
+    display: none;
+  }
+}
+
+@mixin mq-vertical-layout {
+  // This is the "sidebar as header", vertical design approach
+  @media
+    only screen and (orientation: portrait) and (max-device-width: #{$max-vertical-layout-width-portrait - 1}),
+    only screen and (orientation: landscape) and (max-device-width: #{$max-horizontal-layout-width-landscape - 1})
+  {
+    @content;
+  }
+}
+@include mq-vertical-layout {@include layout-detect("vertical");}
+
+@mixin mq-horizontal-layout {
+  // This is the "sidebar as sidebar", horizontal design approach
+  @media
+    only screen and (orientation: portrait) and (min-device-width: #{$max-vertical-layout-width-portrait}),
+    only screen and (orientation: landscape) and (min-device-width: #{$max-horizontal-layout-width-landscape})
+  {
+    @content;
+  }
+}
+@include mq-horizontal-layout {@include layout-detect("horizontal");}

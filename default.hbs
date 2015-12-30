@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{@blog.title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{>css_include}}
+
+    <script>window._bleak = {};</script>
+    {{>js_include}}
+
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <div class="layout">
+      <div class="sidebar-wrapper">{{>sidebar}}</div>
+      <div
+          class="content-wrapper"
+          {{#is "index"}}
+              style="background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url({{@blog.cover}}) center/cover no-repeat"
+          {{/is}}
+          >
+        {{{body}}}
+      </div>
+    </div>
+    {{>detect_layout}}
+    {{ghost_foot}}
+  </body>
+</html>

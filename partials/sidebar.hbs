@@ -1,0 +1,27 @@
+<div class="sidebar">
+
+  {{#if @blog.logo}}
+  <a href="/"><div class="logo" style="background-image: url({{@blog.logo}})"></div></a>
+  {{/if}}
+
+  <div class="title">
+    {{@blog.title}}
+    {{#if @blog.description}}
+    <div class="description">{{@blog.description}}</div>
+    {{/if}}
+  </div>
+
+  {{navigation}}
+
+</div>
+
+<script>
+function resizeLogo() {
+  var logo = $('.sidebar .logo');
+  logo.css('height', logo.width() / 1.61803 + 'px');
+}
+$(resizeLogo);
+$(function () {
+  $(window).resize(resizeLogo);
+});
+</script>

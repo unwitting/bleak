@@ -1,0 +1,23 @@
+<div class="layout-detector"></div>
+
+<script>
+window._bleak.layout = 'horizontal';
+
+window._bleak.detectLayout = function () {
+  // Detect
+  try {
+    window._bleak.layout = JSON.parse(getComputedStyle($('.layout-detector').get(0), ':after').content);
+  } catch(e) {}
+  // Affect things that need it
+  if (!window._bleak.fullContentWrapperBackground) {
+    window._bleak.fullContentWrapperBackground = $('.content-wrapper').css('background');
+  }
+  if (window._bleak.layout === 'vertical') {
+    $('.content-wrapper').css('background', '');
+  } else {
+    $('.content-wrapper').css('background', window._bleak.fullContentWrapperBackground);
+  }
+}
+$(window._bleak.detectLayout);
+$(window).resize(function () {setTimeout(window._bleak.detectLayout, 100);});
+</script>
