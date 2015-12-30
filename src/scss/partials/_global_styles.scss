@@ -1,6 +1,9 @@
+@import "partials/media_queries";
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
+  @include mq-horizontal-layout {overflow: hidden;}
 }
 
 a {
