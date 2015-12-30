@@ -27,6 +27,9 @@ html, body {
       flex: 3;
       overflow-y: scroll;
       height: 100vh;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
     .sidebar-wrapper {
       flex: 1;
