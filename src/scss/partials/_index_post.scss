@@ -5,16 +5,16 @@
   @include mq-horizontal-layout {
     color: white;
 
-    padding: 2rem 2rem;
+    padding: $post-padding-layout-horizontal;
 
     transition: border 0.15s ease-in-out;
-    border-right: 1rem solid rgba(0, 0, 0, 0);
+    border-right: $post-side-border-thickness solid rgba(0, 0, 0, 0);
     &:hover {
-      border-right: 1rem solid rgba(255, 255, 255, 0.5);
+      border-right: $post-side-border-thickness solid rgba(255, 255, 255, 0.5);
     }
   }
   @include mq-vertical-layout {
-    padding: 1rem 1rem;
+    padding: $post-padding-layout-vertical;
     border-top: 1px solid white;
   }
 

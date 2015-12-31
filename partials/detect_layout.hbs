@@ -27,6 +27,15 @@ window._bleak.detectLayout = function () {
   } else {
     $('.pagination-of-text').text(window._bleak.paginationOfText);
   }
+  /// Tag collections 'by' text
+  if (!window._bleak.tagPageByText) {
+    window._bleak.tagPageByText = $('.tag-header .by').text();
+  }
+  if (window._bleak.layout === 'vertical') {
+    $('.tag-header .by').text('');
+  } else {
+    $('.tag-header .by').text(window._bleak.tagPageByText);
+  }
 }
 $(window._bleak.detectLayout);
 $(window).resize(function () {setTimeout(window._bleak.detectLayout, 100);});

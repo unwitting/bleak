@@ -1,8 +1,17 @@
 {{!< default}}
 
 <div class="index-posts">
-{{#foreach posts}}
-  <a href="{{url}}">{{>index_post}}</a>
-{{/foreach}}
-{{#if pagination}}{{pagination}}{{/if}}
+
+  {{#is "tag"}}{{#tag}}
+  <div class="tag-header">
+    <span class="name">{{name}}</span>
+    <span class="tail">&nbsp;a collection<span class="by"> by <a href="/">{{@blog.title}}</a></span></span>
+  </div>
+  {{/tag}}{{/is}}
+
+  {{#foreach posts}}
+    <a href="{{url}}">{{>index_post}}</a>
+  {{/foreach}}
+  {{#if pagination}}{{pagination}}{{/if}}
+
 </div>

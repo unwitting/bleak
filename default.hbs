@@ -17,8 +17,15 @@
       <div class="sidebar-wrapper">{{>sidebar}}</div>
       <div
           class="content-wrapper"
-          {{#is "index, tag"}}
-              style="background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url({{@blog.cover}}) center/cover no-repeat"
+          {{#is "tag"}}{{#tag}}
+            {{#if image}}
+            style="background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url({{image}}) center/cover no-repeat"
+            {{else}}
+            style="background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url({{@blog.cover}}) center/cover no-repeat"
+            {{/if}}
+          {{/tag}}{{/is}}
+          {{#is "index"}}
+            style="background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url({{@blog.cover}}) center/cover no-repeat"
           {{/is}}
           >
         {{{body}}}

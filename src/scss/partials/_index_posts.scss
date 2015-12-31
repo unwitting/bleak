@@ -2,6 +2,41 @@
 
   text-align: right;
 
+  $post-padding-layout-horizontal: 2rem;
+  $post-padding-layout-vertical: 1rem;
+
+  $post-side-border-thickness: 1rem;
+
   @import "index_post";
+
+  .tag-header {
+
+    text-transform: lowercase;
+    color: white;
+
+    @include mq-horizontal-layout {
+      border-bottom: 1px solid white;
+      padding: $post-padding-layout-horizontal + $post-side-border-thickness;
+    }
+    @include mq-vertical-layout {
+      background-color: #353535;
+      padding: $post-padding-layout-vertical;
+      .tail {
+        display: block;
+      }
+    }
+
+    .name {
+      font-size: 3rem;
+    }
+
+    .tail {
+      font-size: 1.5rem;
+      a {
+        font-weight: 200;
+      }
+    }
+
+  }
 
 }

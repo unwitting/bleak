@@ -44,7 +44,7 @@ html, body {
 @include mq-vertical-layout {
   // For posts, the post title etc should come first and the sidebar / logo
   // etc should tail it
-  .post-template .layout {
+  .post-template .layout, .tag-template .layout {
     flex-direction: column-reverse;
   }
 }
