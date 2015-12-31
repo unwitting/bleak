@@ -1,0 +1,24 @@
+.navigation {
+
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 1.5rem;
+  color: $font-color;
+
+  .navigation-item {
+
+    @include mq-horizontal-layout {padding: $sidebar-bar-tb-padding-layout-horizontal $sidebar-bar-lr-padding-layout-horizontal;}
+    @include mq-vertical-layout {padding: $sidebar-bar-tb-padding-layout-vertical $sidebar-bar-lr-padding-layout-vertical;}
+
+    border-top: 1px solid white;
+
+    @include sidebar-control-hover;
+
+  }
+
+}

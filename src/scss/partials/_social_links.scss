@@ -1,0 +1,42 @@
+.social-links {
+
+  color: white;
+  font-size: 1.5rem;
+
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .social-link {
+
+    &.hidden {display: none;}
+
+    // Why have these borders in the individual social-link elements, not the
+    // parent? Because this way if all are hidden, no borders appear at all,
+    // instead of 2px more for an empty container
+    border-top: 1px solid white;
+    @include mq-horizontal-layout {border-bottom: 1px solid white;}
+
+    display: inline-block;
+    flex: 1;
+
+    text-align: center;
+
+    @include mq-horizontal-layout {
+      padding: $sidebar-bar-tb-padding-layout-horizontal 0;
+    }
+    @include mq-vertical-layout {
+      padding: $sidebar-bar-tb-padding-layout-vertical 0;
+    }
+
+    border-left: 1px solid white;
+    &.no-border-left {border-left: none;}
+
+    @include sidebar-control-hover;
+
+  }
+
+}

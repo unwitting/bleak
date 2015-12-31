@@ -1,0 +1,59 @@
+<div class="social-links">
+
+  <a class="social-link bitbucket hidden" target="_blank"><i class="fa fa-bitbucket"></i></a>
+  <a class="social-link deviantart hidden" target="_blank"><i class="fa fa-deviantart"></i></a>
+  <a class="social-link facebook hidden" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a class="social-link flickr hidden" target="_blank"><i class="fa fa-flickr"></i></a>
+  <a class="social-link github hidden" target="_blank"><i class="fa fa-github"></i></a>
+  <a class="social-link instagram hidden" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a class="social-link twitter hidden" target="_blank"><i class="fa fa-twitter"></i></a>
+
+  <script>
+
+  function formSocialMediaUrl(socialNetwork, username) {
+    switch (socialNetwork) {
+      case 'Bitbucket':
+        return 'https://bitbucket.org/' + username;
+      case 'Deviantart':
+        return 'https://' + username + '.deviantart.com';
+      case 'Facebook':
+        return 'https://www.facebook.com/' + username;
+      case 'Flickr':
+        return 'https://www.flickr.com/' + username;
+      case 'Github':
+        return 'https://github.com/' + username;
+      case 'Instagram':
+        return 'https://www.instagram.com/' + username;
+      case 'Twitter':
+        return 'https://twitter.com/' + username;
+    }
+  }
+
+  function revealSocialLink(socialNetwork) {
+    var usernameProp = socialNetwork.toLowerCase() + 'Username';
+    if (window._bleak[usernameProp]) {
+      $('.social-link.' + socialNetwork.toLowerCase()).removeClass('hidden');
+      $('.social-link.' + socialNetwork.toLowerCase()).attr('href', formSocialMediaUrl(socialNetwork, window._bleak[usernameProp]));
+    } else {
+      console.warn('To add a ' + socialNetwork + ' profile link to your blog, put "\<script\>window._bleak.' + usernameProp + ' = \'my' + socialNetwork + 'Username\';\</script\>" in Ghost code injection!');
+    }
+  }
+
+  function revealSocialLinks() {
+
+    revealSocialLink('Bitbucket');
+    revealSocialLink('Deviantart');
+    revealSocialLink('Facebook');
+    revealSocialLink('Flickr');
+    revealSocialLink('Github');
+    revealSocialLink('Instagram');
+    revealSocialLink('Twitter');
+
+    $('.social-link:not(.hidden)').first().addClass('no-border-left');
+
+  }
+
+  $(revealSocialLinks);
+  </script>
+
+</div>

@@ -7,6 +7,19 @@
 
   $darkened-background-color: darken($base-background-color, 10%);
 
+  $sidebar-bar-tb-padding-layout-horizontal: 1rem;
+  $sidebar-bar-lr-padding-layout-horizontal: 2rem;
+  $sidebar-bar-tb-padding-layout-vertical: 0.75rem;
+  $sidebar-bar-lr-padding-layout-vertical: 1.5rem;
+
+  @mixin sidebar-control-hover {
+    transition: background-color 0.15s ease-in-out;
+    background-color: $darkened-background-color;
+    &:hover {
+      background-color: $base-background-color;
+    }
+  }
+
   background-color: $darkened-background-color;
 
   @include mq-horizontal-layout {
@@ -45,35 +58,7 @@
 
   }
 
-  .navigation {
-
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    font-size: 1.5rem;
-    color: $font-color;
-
-    .navigation-item {
-
-      @include mq-horizontal-layout {padding: 1rem 2rem;}
-      @include mq-vertical-layout {padding: 0.75rem 1.5rem;}
-
-      transition: background-color 0.15s ease-in-out;
-
-      border-top: 1px solid white;
-
-      background-color: $darkened-background-color;
-
-      &:hover {
-        background-color: $base-background-color;
-      }
-
-    }
-
-  }
+  @import "partials/sidebar_navigation";
+  @import "partials/social_links";
 
 }
