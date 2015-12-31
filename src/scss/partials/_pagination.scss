@@ -1,0 +1,63 @@
+.pagination {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  @include mq-horizontal-layout {
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+  @include mq-vertical-layout {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .pagination-element {
+    padding: 1rem;
+  }
+
+  .direction {
+    @include mq-horizontal-layout {
+      flex: 3;
+      transition: background-color 0.15s ease-in-out;
+    }
+    @include mq-vertical-layout {
+      flex: 1;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .page-number {
+    text-align: center;
+    flex: 1;
+    font-weight: 200;
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .left {
+    text-align: left;
+    @include mq-horizontal-layout {
+      border-right: 1px solid white;
+    }
+    @include mq-vertical-layout {
+      border-right: 1px solid black;
+    }
+  }
+
+  .right {
+    text-align: right;
+    @include mq-horizontal-layout {
+      border-left: 1px solid white;
+    }
+    @include mq-vertical-layout {
+      border-left: 1px solid black;
+    }
+  }
+
+}

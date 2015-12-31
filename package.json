@@ -1,6 +1,6 @@
 {
   "name": "bleak",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "GPL-3.0",
   "description": "An in-your-face theme for the Ghost blogging platform",
   "author": "Jack Preston <unwttng@gmail.com>",
@@ -19,8 +19,8 @@
     "watch": "npm run compile && npm run watch-css",
 
     "ensure-css": "mkdir -p assets/css",
-    "compile-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style compressed src/scss/",
-    "watch-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style compressed --watch src/scss/"
+    "compile-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style nested src/scss/",
+    "watch-css": "npm run ensure-css && ./node_modules/.bin/node-sass --recursive --output assets/css/ --include-path src/scss/ --output-style nested --watch src/scss/"
 
   },
   "devDependencies": {
