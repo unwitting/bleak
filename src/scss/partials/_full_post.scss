@@ -34,7 +34,6 @@
 
     p {
       margin: 0;
-      width: 100%;
     }
 
     .intro {
@@ -62,6 +61,7 @@
 
     p {
       display: inline-block;
+      width: 100%;
     }
 
     @include mq-horizontal-layout {
