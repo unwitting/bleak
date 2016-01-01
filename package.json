@@ -19,7 +19,7 @@
     "blogging"
   ],
   "scripts": {
-    "preversion": "./test.sh"
+    "prepublish": "./test.sh"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
