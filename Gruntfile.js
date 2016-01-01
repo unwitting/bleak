@@ -3,7 +3,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-zip');
 
   grunt.initConfig({
 
@@ -57,19 +56,6 @@ module.exports = function(grunt) {
           interrupt: true
         }
       }
-    },
-
-    zip: {
-      'prod': {
-        src: [
-          '*.hbs',
-          'partials/**.hbs',
-          'assets/**',
-          'LICENSE',
-          'package.json'
-        ],
-        dest: 'bleak.zip'
-      }
     }
 
   });
@@ -77,7 +63,7 @@ module.exports = function(grunt) {
   grunt.registerTask('css-dev', ['sass:dev']);
   grunt.registerTask('css-prod', ['sass:prod', 'postcss:compiled']);
 
-  grunt.registerTask('prod', ['css-prod', 'zip:prod']);
+  grunt.registerTask('prod', ['css-prod']);
 
   grunt.registerTask('default', ['watch:css']);
 

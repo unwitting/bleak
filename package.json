@@ -19,7 +19,7 @@
     "blogging"
   ],
   "scripts": {
-    "prepublish": "./node_modules/.bin/grunt prod && git add bleak.zip && git commit -m 'Generated Zip file'"
+    "prepublish": "./node_modules/.bin/grunt prod && git add assets && git commit -m 'Generated assets'"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
@@ -28,7 +28,6 @@
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-postcss": "^0.7.1",
-    "grunt-zip": "^0.17.1",
     "node-sass": "^3.4.2"
   }
 }
