@@ -19,7 +19,7 @@
     "blogging"
   ],
   "scripts": {
-    "prepublish": "./node_modules/.bin/grunt prod && git add assets && $(git diff-index --quiet HEAD || git commit -m 'Generated assets')"
+    "prepublish": "./node_modules/.bin/grunt prod"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
