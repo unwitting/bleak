@@ -86,3 +86,16 @@ The theme looks best when you use one, two or three of the above in combination!
 
 ### Static page
 ![bleak](https://dl.dropboxusercontent.com/s/vsoqq45omnkbr7k/bleak_page_large.png)
+
+## Mobile screenshots
+bleak is responsive, switching to a tailored vertical layout with the right content top
+and center when on small devices.
+
+### Index page
+![bleak](https://dl.dropboxusercontent.com/s/h58x9bzv01aooa9/bleak_index_small.png)
+
+### Post
+![bleak](https://dl.dropboxusercontent.com/s/ynzc97blvcv3op0/bleak_post_small.png)
+
+### Static page
+![bleak](https://dl.dropboxusercontent.com/s/ruvcym6b0nr3ja2/bleak_page_small.png)
