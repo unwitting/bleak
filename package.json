@@ -18,6 +18,9 @@
     "blog",
     "blogging"
   ],
+  "scripts": {
+    "version": "grunt prod"
+  },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
     "grunt": "^0.4.5",
