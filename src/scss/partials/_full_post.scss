@@ -1,5 +1,6 @@
 .full-post {
 
+  $content-side-padding-horizontal-layout: 1rem;
   $content-side-padding-vertical-layout: 1rem;
 
   .cover {
@@ -64,11 +65,21 @@
       width: 100%;
     }
 
+    .date {
+      display: block;
+      text-align: right;
+      text-transform: lowercase;
+      color: #777;
+    }
+
     @include mq-horizontal-layout {
-      padding: 1rem 2rem;
+      padding: $content-side-padding-horizontal-layout 2*$content-side-padding-horizontal-layout;
+      .date {
+        padding: $content-side-padding-horizontal-layout 0;
+      }
       p {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: $content-side-padding-horizontal-layout;
+        margin-bottom: $content-side-padding-horizontal-layout;
       }
       img {
         width: 100%;
@@ -77,6 +88,9 @@
     @include mq-vertical-layout {
       padding: $content-side-padding-vertical-layout;
       padding-bottom: 0;
+      .date {
+        padding-bottom: $content-side-padding-vertical-layout;
+      }
       p {
         margin: 0;
         margin-bottom: 1rem;
