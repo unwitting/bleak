@@ -3,7 +3,19 @@ __bleak__ is a stunning theme for the [Ghost](https://ghost.org/) blog platform.
 full-section images and a slick responsive design that puts the right content right in your
 readers' faces.
 
-## Configurability
+## Quick installation
+We'll talk about how insanely customisable bleak is in a second, but if you just want to get
+started, it works without any configuration too.
+
+Get the .zip file for the latest version [here](https://cdn.rawgit.com/unwitting/bleak/master/bleak.zip),
+and install it however you normally do:
+
+* Ghost(Pro) users can upload this .zip file via the Pro dashboard. See the
+[official guide](http://support.ghost.org/upload-theme-ghostpro/).
+* Self-hosted Ghost users should upload the .zip file to Ghost's `content/themes/` directory and
+extract it with `unzip -o bleak.zip`.
+
+## Configuration
 bleak is super configurable. It supports __Google Analytics__, __Disqus__ integration and
 a whole suite of __social profile links__. And the best thing is, not a single bit of it requires
 you to hack around with the theme's files. It works right out of the box, and you can set it
