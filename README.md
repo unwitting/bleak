@@ -9,7 +9,7 @@ readers' faces. [See some more screenshots below](#screenshots).
 We'll talk about how insanely customisable bleak is in a second, but if you just want to get
 started, it works without any configuration too.
 
-Get the .zip file for the latest version [here](https://cdn.rawgit.com/unwitting/bleak/master/bleak.zip),
+Get the .zip file for the latest version [here](https://github.com/unwitting/bleak/raw/master/bleak.zip),
 and install it however you normally do:
 
 * Ghost(Pro) users can upload this .zip file via the Pro dashboard. See the
