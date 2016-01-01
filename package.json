@@ -19,7 +19,7 @@
     "blogging"
   ],
   "scripts": {
-    "preversion": "./node_modules/.bin/grunt prod"
+    "preversion": "./test.sh"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
