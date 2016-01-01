@@ -4,6 +4,7 @@ node_modules/
 src/
 
 .gitignore
+bleak.zip
 Gruntfile.js
 
 .DS_Store
