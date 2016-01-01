@@ -3,7 +3,8 @@
 # bleak. a theme for ghost
 __bleak__ is a stunning theme for the [Ghost](https://ghost.org/) blog platform. It features
 full-section images and a slick responsive design that puts the right content right in your
-readers' faces. [See some more screenshots below](#screenshots).
+readers' faces. [See some more screenshots below](#screenshots), or
+__see it in action__ on my blog, [unwttng.com](http://unwttng.com).
 
 ## Quick installation
 We'll talk about how insanely customisable bleak is in a second, but if you just want to get
