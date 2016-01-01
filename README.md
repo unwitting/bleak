@@ -1,7 +1,9 @@
+![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
+
 # bleak. a theme for ghost
 __bleak__ is a stunning theme for the [Ghost](https://ghost.org/) blog platform. It features
 full-section images and a slick responsive design that puts the right content right in your
-readers' faces.
+readers' faces. [See some more screenshots below](#screenshots).
 
 ## Quick installation
 We'll talk about how insanely customisable bleak is in a second, but if you just want to get
@@ -73,3 +75,14 @@ Which networks are available?
 * youtube: `window._bleak.youtubeUsername = '...';`
 
 The theme looks best when you use one, two or three of the above in combination!
+
+## Screenshots
+
+### Index page
+![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
+
+### Post
+![bleak](https://dl.dropboxusercontent.com/s/c3nveo3zk981s70/bleak_post_large.png)
+
+### Static page
+![bleak](https://dl.dropboxusercontent.com/s/vsoqq45omnkbr7k/bleak_page_large.png)
