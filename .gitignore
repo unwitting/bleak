@@ -1,4 +1,5 @@
 node_modules/
+assets/compiled/
 
 .sass-cache
 .DS_Store
