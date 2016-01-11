@@ -6,7 +6,15 @@
   height: $item-size;
 
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-direction: row;
+
+  .prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 ($item-size / 3);
+  }
 
   .share-item {
 
