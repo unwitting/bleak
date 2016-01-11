@@ -1,0 +1,15 @@
+<div class="share-toolbar">
+  <a class="share-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{meta_title}}&url={{url absolute="true"}}&hashtags={{#foreach tags}}{{name}},{{/foreach}}">
+    <i class="fa fa-twitter"></i><span class="action">Tweet</span>
+  </a>
+</div>
+
+<script>
+function appendTwitterUsernameToSharing() {
+  if (window._bleak.twitterUsername) {
+    var sharer = $('.share-item.twitter');
+    sharer.attr('href', sharer.attr('href') + '&via=' + window._bleak.twitterUsername);
+  }
+}
+$(appendTwitterUsernameToSharing);
+</script>
