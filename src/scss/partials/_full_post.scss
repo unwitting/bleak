@@ -112,6 +112,6 @@
 
 }
 
-#disqus_thread {
+#disqus_thread:not(:empty) {
   padding-top: 2rem;
 }
