@@ -18,6 +18,8 @@ and install it however you normally do:
 * Self-hosted Ghost users should upload the .zip file to Ghost's `content/themes/` directory and
 extract it with `unzip -o bleak.zip`.
 
+Once you go live with bleak, please get in touch! I'd love to feature your blog as a user of the theme right here.
+
 ## Configuration
 bleak is super configurable. It supports __Google Analytics__, __Disqus__ integration and
 a whole suite of __social profile links__. And the best thing is, not a single bit of it requires
