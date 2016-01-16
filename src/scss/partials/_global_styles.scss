@@ -3,7 +3,10 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  @include mq-horizontal-layout {overflow: hidden;}
+  @include mq-horizontal-layout {
+    overflow: hidden;
+    background-color: rgb(53, 53, 53);
+  }
 }
 
 a {
