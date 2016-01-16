@@ -10,13 +10,10 @@ window._bleak.detectLayout = function () {
   } catch(e) {}
   // Affect things that need it
   /// Content wrapper background
-  if (!window._bleak.fullContentWrapperBackground) {
-    window._bleak.fullContentWrapperBackground = $('.content-wrapper').css('background');
-  }
   if (window._bleak.layout === 'vertical') {
-    $('.content-wrapper').css('background', '');
+    $('.content-wrapper').removeClass('full-background-image');
   } else {
-    $('.content-wrapper').css('background', window._bleak.fullContentWrapperBackground);
+    $('.content-wrapper').addClass('full-background-image');
   }
   /// Pagination 'of' text
   if (!window._bleak.paginationOfText) {
