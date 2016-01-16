@@ -47,6 +47,13 @@ html, body {
   .post-template .layout, .tag-template .layout {
     flex-direction: column-reverse;
   }
+
+  // Override the background image back out again if we're in a phone.
+  // The image style is defined in a <style> tag to make use of template vars,
+  // but done before CSS imports so that this can override it.
+  .full-background-image {
+    background: none;
+  }
 }
 
 @import "sidebar";

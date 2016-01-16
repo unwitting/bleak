@@ -9,12 +9,6 @@ window._bleak.detectLayout = function () {
     window._bleak.layout = JSON.parse(getComputedStyle($('.layout-detector').get(0), ':after').content);
   } catch(e) {}
   // Affect things that need it
-  /// Content wrapper background
-  if (window._bleak.layout === 'vertical') {
-    $('.content-wrapper').removeClass('full-background-image');
-  } else {
-    $('.content-wrapper').addClass('full-background-image');
-  }
   /// Pagination 'of' text
   if (!window._bleak.paginationOfText) {
     window._bleak.paginationOfText = $('.pagination-of-text').text();
