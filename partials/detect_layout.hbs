@@ -1,33 +1,33 @@
 <div class="layout-detector"></div>
 
 <script>
-window._bleak.layout = 'horizontal';
+window.__themeCfg.layout = 'horizontal';
 
-window._bleak.detectLayout = function () {
+window.__themeCfg.detectLayout = function () {
   // Detect
   try {
-    window._bleak.layout = JSON.parse(getComputedStyle($('.layout-detector').get(0), ':after').content);
+    window.__themeCfg.layout = JSON.parse(getComputedStyle($('.layout-detector').get(0), ':after').content);
   } catch(e) {}
   // Affect things that need it
   /// Pagination 'of' text
-  if (!window._bleak.paginationOfText) {
-    window._bleak.paginationOfText = $('.pagination-of-text').text();
+  if (!window.__themeCfg.paginationOfText) {
+    window.__themeCfg.paginationOfText = $('.pagination-of-text').text();
   }
-  if (window._bleak.layout === 'vertical') {
+  if (window.__themeCfg.layout === 'vertical') {
     $('.pagination-of-text').text('/');
   } else {
-    $('.pagination-of-text').text(window._bleak.paginationOfText);
+    $('.pagination-of-text').text(window.__themeCfg.paginationOfText);
   }
   /// Tag collections 'by' text
-  if (!window._bleak.tagPageByText) {
-    window._bleak.tagPageByText = $('.tag-header .by').text();
+  if (!window.__themeCfg.tagPageByText) {
+    window.__themeCfg.tagPageByText = $('.tag-header .by').text();
   }
-  if (window._bleak.layout === 'vertical') {
+  if (window.__themeCfg.layout === 'vertical') {
     $('.tag-header .by').text('');
   } else {
-    $('.tag-header .by').text(window._bleak.tagPageByText);
+    $('.tag-header .by').text(window.__themeCfg.tagPageByText);
   }
 }
-$(window._bleak.detectLayout);
-$(window).resize(function () {setTimeout(window._bleak.detectLayout, 100);});
+$(window.__themeCfg.detectLayout);
+$(window).resize(function () {setTimeout(window.__themeCfg.detectLayout, 100);});
 </script>

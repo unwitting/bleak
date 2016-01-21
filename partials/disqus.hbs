@@ -8,17 +8,17 @@ var disqus_config = function () {
   }
 };
 
-if (window._bleak.disqusUsername) {
+if (window.__themeCfg.disqusUsername) {
   (function() { // DON'T EDIT BELOW THIS LINE
   var d = document, s = d.createElement('script');
 
-  s.src = '//' + window._bleak.disqusUsername + '.disqus.com/embed.js';
+  s.src = '//' + window.__themeCfg.disqusUsername + '.disqus.com/embed.js';
 
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
   })();
 } else {
-  console.warn('Bleak supports Disqus commenting - put "\<script\>window._bleak.disqusUsername = \'myDisqusName\';\</script\>" in Ghost code injection to turn it on!');
+  console.warn('Bleak supports Disqus commenting - put "\<script\>window.__themeCfg.disqusUsername = \'myDisqusName\';\</script\>" in Ghost code injection to turn it on!');
 }
 
 </script>

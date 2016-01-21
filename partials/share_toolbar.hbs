@@ -11,8 +11,8 @@
 <script>
 function appendTwitterUsernameToSharing() {
   var sharer = $('.share-item.twitter');
-  if (window._bleak.twitterUsername && sharer.attr('href').indexOf('&via=') === -1) {
-    sharer.attr('href', sharer.attr('href') + '&via=' + window._bleak.twitterUsername);
+  if (window.__themeCfg.twitterUsername && sharer.attr('href').indexOf('&via=') === -1) {
+    sharer.attr('href', sharer.attr('href') + '&via=' + window.__themeCfg.twitterUsername);
   }
 }
 $(appendTwitterUsernameToSharing);

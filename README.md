@@ -34,7 +34,7 @@ Got a Google Analytics tracking ID? Instantly enable tracking on your blog by ad
 line to header code injection:
 
 ```html
-<script>window._bleak.googleAnalyticsId = 'UA-12345678-1';</script>
+<script>window.__themeCfg.googleAnalyticsId = 'UA-12345678-1';</script>
 ```
 
 ### Disqus
@@ -42,7 +42,7 @@ To integrate a __bleak__ blog with Disqus, you just need a Disqus username. Drop
 configuration with this one line in the header code injection interface:
 
 ```html
-<script>window._bleak.disqusUsername = 'mydisqususername';</script>
+<script>window.__themeCfg.disqusUsername = 'mydisqususername';</script>
 ```
 
 Done! Disqus threads will now appear on all of your posts.
@@ -51,31 +51,31 @@ Done! Disqus threads will now appear on all of your posts.
 __bleak__ supports a wide range of social profile links. Configuring any of these will cause the
 appropriate navigation items to appear in your sidebar.
 
-For any network listed below, just configure `window._bleak.<socialnetwork>Username` in your
+For any network listed below, just configure `window.__themeCfg.<socialnetwork>Username` in your
 blog header code injection. For example, to add a navigation item to your Twitter profile, you
 would add:
 
 ```html
-<script>window._bleak.twitterUsername = 'unwttng';</script>
+<script>window.__themeCfg.twitterUsername = 'unwttng';</script>
 ```
 
 As if by magic, you now have a social links bar in your sidebar with a Twitter-icon link.
 
 Which networks are available?
 
-* bitbucket: `window._bleak.bitbucketUsername = '...';`
-* deviantart: `window._bleak.deviantartUsername = '...';`
-* facebook: `window._bleak.facebookUsername = '...';`
-* flickr: `window._bleak.flickrUsername = '...';`
-* github: `window._bleak.githubUsername = '...';`
-* instagram: `window._bleak.instagramUsername = '...';`
-* linkedin: `window._bleak.linkedinUsername = '...';`
-* pinterest: `window._bleak.pinterestUsername = '...';`
-* soundcloud: `window._bleak.soundcloudUsername = '...';`
-* twitch: `window._bleak.twitchUsername = '...';`
-* twitter: `window._bleak.twitterUsername = '...';`
-* vimeo: `window._bleak.vimeoUsername = '...';`
-* youtube: `window._bleak.youtubeUsername = '...';`
+* bitbucket: `window.__themeCfg.bitbucketUsername = '...';`
+* deviantart: `window.__themeCfg.deviantartUsername = '...';`
+* facebook: `window.__themeCfg.facebookUsername = '...';`
+* flickr: `window.__themeCfg.flickrUsername = '...';`
+* github: `window.__themeCfg.githubUsername = '...';`
+* instagram: `window.__themeCfg.instagramUsername = '...';`
+* linkedin: `window.__themeCfg.linkedinUsername = '...';`
+* pinterest: `window.__themeCfg.pinterestUsername = '...';`
+* soundcloud: `window.__themeCfg.soundcloudUsername = '...';`
+* twitch: `window.__themeCfg.twitchUsername = '...';`
+* twitter: `window.__themeCfg.twitterUsername = '...';`
+* vimeo: `window.__themeCfg.vimeoUsername = '...';`
+* youtube: `window.__themeCfg.youtubeUsername = '...';`
 
 The theme looks best when you use one, two or three of the above in combination!
 

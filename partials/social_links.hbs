@@ -49,11 +49,11 @@
 
   function revealSocialLink(socialNetwork) {
     var usernameProp = socialNetwork.toLowerCase() + 'Username';
-    if (window._bleak[usernameProp]) {
+    if (window.__themeCfg[usernameProp]) {
       $('.social-link.' + socialNetwork.toLowerCase()).removeClass('hidden');
-      $('.social-link.' + socialNetwork.toLowerCase()).attr('href', formSocialMediaUrl(socialNetwork, window._bleak[usernameProp]));
+      $('.social-link.' + socialNetwork.toLowerCase()).attr('href', formSocialMediaUrl(socialNetwork, window.__themeCfg[usernameProp]));
     } else {
-      console.warn('To add a ' + socialNetwork + ' profile link to your blog, put "\<script\>window._bleak.' + usernameProp + ' = \'my' + socialNetwork + 'Username\';\</script\>" in Ghost code injection!');
+      console.warn('To add a ' + socialNetwork + ' profile link to your blog, put "\<script\>window.__themeCfg.' + usernameProp + ' = \'my' + socialNetwork + 'Username\';\</script\>" in Ghost code injection!');
     }
   }
 
