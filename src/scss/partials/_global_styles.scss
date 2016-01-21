@@ -13,3 +13,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+:not(pre) code {
+  font-size: 1.25em;
+  font-weight: bold;
+}
