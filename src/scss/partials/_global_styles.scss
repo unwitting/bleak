@@ -14,9 +14,7 @@ a {
   color: inherit;
 }
 
-code {
-  &:not(pre &) {
-    font-size: 1.25em;
-    font-weight: bold;
-  }
+*:not(pre) > code {
+  font-size: 1.25em;
+  font-weight: bold;
 }
