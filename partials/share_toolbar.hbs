@@ -1,6 +1,6 @@
 <div class="share-toolbar">
   <span class="prompt">Share &gt;</span>
-  <a class="share-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{encode meta_title}}&url={{url absolute="true"}}">
+  <a class="share-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{#if meta_title}}{{encode meta_title}}{{else}}{{encode title}}{{/if}}&url={{url absolute="true"}}">
     <i class="fa fa-twitter"></i><span class="action">Tweet</span>
   </a>
   <a class="share-item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
