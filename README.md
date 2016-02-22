@@ -81,7 +81,14 @@ Which networks are available?
 
 The theme looks best when you use one, two or three of the above in combination!
 
-## Screenshots
+## See it in action
+
+### Real life blogs using __bleak__
+
+Let me know if your blog uses the theme!
+
+* [Dinchamion](https://www.dinchamion.com/)
+* [Datafluisteraar](http://datafluisteraar.org/)
 
 ### Index page
 ![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
