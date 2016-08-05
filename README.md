@@ -22,6 +22,14 @@ extract it with `unzip -o bleak.zip`.
 
 Once you go live with bleak, please get in touch! I'd love to feature your blog as a user of the theme right here.
 
+## Development
+[Sass](http://sass-lang.com) for CSS, along with [Grunt](http://gruntjs.com) for auto building the SCSS files 
+```
+npm install -g grunt-cli
+npm install
+grunt
+```
+
 ## Configuration
 bleak is super configurable. It supports __Google Analytics__, __Disqus__ integration and
 a whole suite of __social profile links__. And the best thing is, not a single bit of it requires
