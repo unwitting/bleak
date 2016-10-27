@@ -74,6 +74,18 @@
       text-decoration: underline;
     }
 
+    blockquote {
+      font-size: 1.15em;
+      padding-left: 1rem;
+      border-left: 4px solid currentColor;
+      @include mq-vertical-layout {
+        margin: 0 0 1rem 0;
+        p {
+          margin: 0;
+        }
+      }
+    }
+
     .date {
       display: block;
       text-align: right;
