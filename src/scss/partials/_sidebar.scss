@@ -3,7 +3,7 @@
 .sidebar {
 
   $base-background-color: #353535;
-  $font-color: #E4E4E4;
+  $font-color: #e4e4e4;
 
   $darkened-background-color: darken($base-background-color, 10%);
 
@@ -19,12 +19,11 @@
       background-color: $base-background-color;
     }
   }
-
-  background-color: $darkened-background-color;
-
   @include mq-horizontal-layout {
     border-left: 1px solid white;
   }
+
+  background-color: $darkened-background-color;
 
   text-align: right;
   text-transform: lowercase;
@@ -41,13 +40,13 @@
 
   .title {
 
+    @include mq-horizontal-layout {padding: 2rem;}
+    @include mq-vertical-layout {padding: 1.5rem;}
+
     background-color: $base-background-color;
 
     box-sizing: border-box;
     width: 100%;
-
-    @include mq-horizontal-layout {padding: 2rem;}
-    @include mq-vertical-layout {padding: 1.5rem;}
 
     font-size: 2.5rem;
     color: $font-color;

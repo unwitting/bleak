@@ -1,9 +1,10 @@
 .pagination {
 
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+
+  width: 100%;
 
   @include mq-horizontal-layout {
     color: white;

@@ -2,12 +2,12 @@
 
   $item-size: 3rem;
 
-  width: 100%;
-  height: $item-size;
-
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+
+  width: 100%;
+  height: $item-size;
 
   .prompt {
     display: flex;
@@ -18,10 +18,11 @@
 
   .share-item {
 
-    width: $item-size;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: $item-size;
 
     .action {
       display: none;

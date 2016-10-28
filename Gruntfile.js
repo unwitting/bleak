@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-postcss');
 
   grunt.initConfig({
@@ -47,10 +48,17 @@ module.exports = function(grunt) {
       }
     },
 
+    sasslint: {
+      options: {
+        configFile: '.sass-lint.yml'
+      },
+      target: ['src/scss/**/*.s+(a|c)ss']
+    },
+
     watch: {
       css: {
         files: ['src/scss/**/**.scss'],
-        tasks: ['css-dev'],
+        tasks: ['lint-sass', 'css-dev'],
         options: {
           atBegin: true,
           interrupt: true
@@ -63,7 +71,10 @@ module.exports = function(grunt) {
   grunt.registerTask('css-dev', ['sass:dev']);
   grunt.registerTask('css-prod', ['sass:prod', 'postcss:compiled']);
 
-  grunt.registerTask('prod', ['css-prod']);
+  grunt.registerTask('lint-sass', ['sasslint']);
+  grunt.registerTask('lint', ['lint-sass']);
+
+  grunt.registerTask('prod', ['lint', 'css-prod']);
 
   grunt.registerTask('default', ['watch:css']);
 
