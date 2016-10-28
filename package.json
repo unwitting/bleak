@@ -19,7 +19,7 @@
     "blogging"
   ],
   "scripts": {
-    "prepublish": "./node_modules/.bin/grunt prod"
+    "test": "grunt lint"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
