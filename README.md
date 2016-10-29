@@ -65,8 +65,10 @@ As if by magic, you now have a social links bar in your sidebar with a Twitter-i
 
 Which networks are available?
 
+* 500px: `window.__themeCfg.fivehundredpxUsername = '...';`
 * bitbucket: `window.__themeCfg.bitbucketUsername = '...';`
 * deviantart: `window.__themeCfg.deviantartUsername = '...';`
+* etsy: `window.__themeCfg.etsyUsername = '...';`
 * facebook: `window.__themeCfg.facebookUsername = '...';`
 * flickr: `window.__themeCfg.flickrUsername = '...';`
 * github: `window.__themeCfg.githubUsername = '...';`
@@ -82,13 +84,6 @@ Which networks are available?
 The theme looks best when you use one, two or three of the above in combination!
 
 ## See it in action
-
-### Real life blogs using __bleak__
-
-Let me know if your blog uses the theme!
-
-* [Dinchamion](https://www.dinchamion.com/)
-* [Datafluisteraar](http://datafluisteraar.org/)
 
 ### Index page
 ![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
