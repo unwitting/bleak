@@ -1,5 +1,9 @@
 <div class="social-links">
 
+  {{#is "amp"}}
+
+  {{else}}
+
   <a class="social-link bitbucket hidden" target="_blank"><i class="fa fa-bitbucket"></i></a>
   <a class="social-link deviantart hidden" target="_blank"><i class="fa fa-deviantart"></i></a>
   <a class="social-link facebook hidden" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -79,5 +83,7 @@
 
   $(revealSocialLinks);
   </script>
+
+  {{/is}}
 
 </div>

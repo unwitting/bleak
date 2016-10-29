@@ -1,13 +1,25 @@
 <div class="share-toolbar">
   <span class="prompt">Share &gt;</span>
-  <a class="share-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{#if meta_title}}{{encode meta_title}}{{else}}{{encode title}}{{/if}}&url={{url absolute="true"}}">
-    <i class="fa fa-twitter"></i><span class="action">Tweet</span>
-  </a>
-  <a class="share-item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
-    <i class="fa fa-facebook"></i><span class="action">Share</span>
-  </a>
+
+  {{#is "amp"}}
+
+    <amp-social-share type="twitter"></amp-social-share>
+
+  {{else}}
+
+    <a class="share-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{#if meta_title}}{{encode meta_title}}{{else}}{{encode title}}{{/if}}&url={{url absolute="true"}}">
+      <i class="fa fa-twitter"></i><span class="action">Tweet</span>
+    </a>
+    <a class="share-item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
+      <i class="fa fa-facebook"></i><span class="action">Share</span>
+    </a>
+
+  {{/is}}
+
 </div>
 
+{{#is "amp"}}
+{{else}}
 <script>
 function appendTwitterUsernameToSharing() {
   var sharer = $('.share-item.twitter');
@@ -17,3 +29,4 @@ function appendTwitterUsernameToSharing() {
 }
 $(appendTwitterUsernameToSharing);
 </script>
+{{/is}}

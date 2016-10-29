@@ -26,11 +26,9 @@
 
     text-transform: lowercase;
 
-    &.cover-image {
-      color: white;
-    }
+    color: white;
     &.text-only {
-      border-bottom: 1px solid #000;
+      background-color: #2ec4ff;
     }
 
     text-align: center;
@@ -76,7 +74,7 @@
       text-decoration: underline;
     }
 
-    blockquote {
+    blockquote:not(.twitter-tweet) {
       font-size: 1.15em;
       padding-left: 1rem;
       border-left: 4px solid currentColor;

@@ -1,22 +1,30 @@
 <div class="full-post">
 
-  {{#if image}}
-  <div
-    class="cover cover-image"
-    style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url({{image}}) center/cover no-repeat"
-  >
+  {{#is "amp"}}
+
+    <div class="cover text-only">{{>full_post_title_stuff}}</div>
+
   {{else}}
-  {{#if @blog.cover}}
-  <div
-    class="cover cover-image"
-    style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url({{@blog.cover}}) center/cover no-repeat"
-  >
-  {{else}}
-  <div class="cover text-only">
-  {{/if}}
-  {{/if}}
-    {{>full_post_title_stuff}}
-  </div>
+
+    {{#if image}}
+    <div
+      class="cover cover-image"
+      style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url({{image}}) center/cover no-repeat"
+    >
+    {{else}}
+    {{#if @blog.cover}}
+    <div
+      class="cover cover-image"
+      style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url({{@blog.cover}}) center/cover no-repeat"
+    >
+    {{else}}
+    <div class="cover text-only">
+    {{/if}}
+    {{/if}}
+      {{>full_post_title_stuff}}
+    </div>
+
+  {{/is}}
 
   {{#is "post"}}{{>share_toolbar}}{{/is}}
 
@@ -26,11 +34,14 @@
   </div>
   {{#is "post"}}{{>share_toolbar}}{{/is}}
   <div class="content">
+    {{#is "amp"}}{{else}}
     {{>disqus}}
+    {{/is}}
   </div>
 
 </div>
 
+{{#is "amp"}}{{else}}
 <script>
 function resizeCoverImage() {
   var image = $('.full-post .cover-image');
@@ -45,3 +56,4 @@ $(function () {
   $(window).resize(resizeCoverImage);
 });
 </script>
+{{/is}}
