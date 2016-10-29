@@ -4,8 +4,10 @@
 
   {{else}}
 
+  <a class="social-link fivehundredpx hidden" target="_blank"><i class="fa fa-500px"></i></a>
   <a class="social-link bitbucket hidden" target="_blank"><i class="fa fa-bitbucket"></i></a>
   <a class="social-link deviantart hidden" target="_blank"><i class="fa fa-deviantart"></i></a>
+  <a class="social-link etsy hidden" target="_blank"><i class="fa fa-etsy"></i></a>
   <a class="social-link facebook hidden" target="_blank"><i class="fa fa-facebook"></i></a>
   <a class="social-link flickr hidden" target="_blank"><i class="fa fa-flickr"></i></a>
   <a class="social-link github hidden" target="_blank"><i class="fa fa-github"></i></a>
@@ -22,10 +24,14 @@
 
   function formSocialMediaUrl(socialNetwork, username) {
     switch (socialNetwork) {
+      case 'Fivehundredpx':
+        return 'https://500px.com/' + username;
       case 'Bitbucket':
         return 'https://bitbucket.org/' + username;
       case 'Deviantart':
         return 'https://' + username + '.deviantart.com';
+      case 'Etsy':
+        return 'https://www.etsy.com/shop/' + username;
       case 'Facebook':
         return 'https://www.facebook.com/' + username;
       case 'Flickr':
@@ -63,8 +69,10 @@
 
   function revealSocialLinks() {
 
+    revealSocialLink('Fivehundredpx');
     revealSocialLink('Bitbucket');
     revealSocialLink('Deviantart');
+    revealSocialLink('Etsy');
     revealSocialLink('Facebook');
     revealSocialLink('Flickr');
     revealSocialLink('Github');
