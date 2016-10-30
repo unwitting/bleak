@@ -1,108 +1,168 @@
-![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
+# Preact Boilerplate / Starter Kit
 
-[![gtca button](https://camo.githubusercontent.com/ebcfabe77067823252071c7b7554dd5d6644e4c5/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f786a64336637387934667536366e632f53637265656e73686f74253230323031362d30312d323325323031312e30382e34322e706e67)](https://github.com/unwitting/gtca)
+[![Build Status](https://travis-ci.org/developit/preact-boilerplate.svg?branch=master)](https://travis-ci.org/developit/preact-boilerplate)
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/developit/preact)
 
-# bleak. a theme for ghost
-__bleak__ is a stunning theme for the [Ghost](https://ghost.org/) blog platform. It features
-full-section images and a slick responsive design that puts the right content right in your
-readers' faces. [See some more screenshots below](#screenshots), or
-__see it in action__ on my blog, [unwttng.com](http://unwttng.com).
+> :guitar: Ready-to-rock [Preact] starter project, powered by [webpack].
+>
+> :rocket: If you're starting a new project using [Preact], you've come to the right place.
+Below is a step-by-step guide that takes you straight from downloading this boilerplate to production.
+>
+> **[:boom: View Demo :boom:](https://preact-boilerplate.surge.sh)**
 
-## Quick installation
-We'll talk about how insanely customisable bleak is in a second, but if you just want to get
-started, it works without any configuration too.
 
-Get the .zip file for the latest version [here](https://github.com/unwitting/bleak/archive/master.zip),
-and install it however you normally do:
+---
 
-* Ghost(Pro) users can upload this .zip file via the Pro dashboard. See the
-[official guide](http://support.ghost.org/upload-theme-ghostpro/).
-* Self-hosted Ghost users should upload the .zip file to Ghost's `content/themes/` directory and
-extract it with `unzip -o bleak.zip`.
 
-Once you go live with bleak, please get in touch! I'd love to feature your blog as a user of the theme right here.
+# Quick-Start Guide
 
-## Configuration
-bleak is super configurable. It supports __Google Analytics__, __Disqus__ integration and
-a whole suite of __social profile links__. And the best thing is, not a single bit of it requires
-you to hack around with the theme's files. It works right out of the box, and you can set it
-up however you like using the Ghost admin interface.
+- [Installation](#installation)
+- [Development Workflow](#development-workflow)
+- [Structure](#structure)
+- [CSS Modules](#css-modules)
+- [Handling URLS](#handling-urls)
 
-All theme configuration is done by adding one-line items to your Ghost blog __header__ via the
-code injection interface at `yourblog.com/ghost/settings/code-injection`.
 
-### Google Analytics
-Got a Google Analytics tracking ID? Instantly enable tracking on your blog by adding the following
-line to header code injection:
+## Installation
 
-```html
-<script>window.__themeCfg.googleAnalyticsId = 'UA-12345678-1';</script>
+**1. Clone this repo:**
+
+```sh
+git clone --depth 1 https://github.com/developit/preact-boilerplate.git my-app
+cd my-app
 ```
 
-### Disqus
-To integrate a __bleak__ blog with Disqus, you just need a Disqus username. Drop it into your
-configuration with this one line in the header code injection interface:
 
-```html
-<script>window.__themeCfg.disqusUsername = 'mydisqususername';</script>
+**2. Make it your own:**
+
+```sh
+rm -rf .git && git init && npm init
 ```
 
-Done! Disqus threads will now appear on all of your posts.
+> :information_source: This re-initializes the repo and sets up your NPM project.
 
-### Social links
-__bleak__ supports a wide range of social profile links. Configuring any of these will cause the
-appropriate navigation items to appear in your sidebar.
 
-For any network listed below, just configure `window.__themeCfg.<socialnetwork>Username` in your
-blog header code injection. For example, to add a navigation item to your Twitter profile, you
-would add:
+**3. Install the dependencies:**
 
-```html
-<script>window.__themeCfg.twitterUsername = 'unwttng';</script>
+```sh
+npm install
 ```
 
-As if by magic, you now have a social links bar in your sidebar with a Twitter-icon link.
+> You're done installing! Now let's get started developing.
 
-Which networks are available?
 
-* 500px: `window.__themeCfg.fivehundredpxUsername = '...';`
-* bitbucket: `window.__themeCfg.bitbucketUsername = '...';`
-* deviantart: `window.__themeCfg.deviantartUsername = '...';`
-* etsy: `window.__themeCfg.etsyUsername = '...';`
-* facebook: `window.__themeCfg.facebookUsername = '...';`
-* flickr: `window.__themeCfg.flickrUsername = '...';`
-* github: `window.__themeCfg.githubUsername = '...';`
-* instagram: `window.__themeCfg.instagramUsername = '...';`
-* linkedin: `window.__themeCfg.linkedinUsername = '...';`
-* pinterest: `window.__themeCfg.pinterestUsername = '...';`
-* soundcloud: `window.__themeCfg.soundcloudUsername = '...';`
-* twitch: `window.__themeCfg.twitchUsername = '...';`
-* twitter: `window.__themeCfg.twitterUsername = '...';`
-* vimeo: `window.__themeCfg.vimeoUsername = '...';`
-* youtube: `window.__themeCfg.youtubeUsername = '...';`
 
-The theme looks best when you use one, two or three of the above in combination!
+## Development Workflow
 
-## See it in action
 
-### Index page
-![bleak](https://dl.dropboxusercontent.com/s/kcl7il32x5d59r5/bleak_index_large.png)
+**4. Start a live-reload development server:**
 
-### Post
-![bleak](https://dl.dropboxusercontent.com/s/c3nveo3zk981s70/bleak_post_large.png)
+```sh
+npm run dev
+```
 
-### Static page
-![bleak](https://dl.dropboxusercontent.com/s/vsoqq45omnkbr7k/bleak_page_large.png)
+> This is a full web server nicely suited to your project. Any time you make changes within the `src` directory, it will rebuild and even refresh your browser.
 
-## Mobile screenshots
-bleak is responsive, switching to a tailored vertical layout with the right content top
-and center when on small devices.
+**5. Testing with `mocha`, `karma`, `chai`, `sinon` via `phantomjs`:**
 
-### Index page
-![bleak](https://dl.dropboxusercontent.com/s/h58x9bzv01aooa9/bleak_index_small.png)
+```sh
+npm test
+```
 
-### Post
-![bleak](https://dl.dropboxusercontent.com/s/ynzc97blvcv3op0/bleak_post_small.png)
+**6. Generate a production build in `./build`:**
 
-### Static page
-![bleak](https://dl.dropboxusercontent.com/s/ruvcym6b0nr3ja2/bleak_page_small.png)
+```sh
+npm run build
+```
+
+> You can now deploy the contents of the `build` directory to production!
+>
+> **[Surge.sh](https://surge.sh) Example:** `surge ./build -d my-app.surge.sh`
+
+
+**5. Start local production server with `superstatic`:**
+
+```sh
+npm start
+```
+
+> This is to simulate a production (CDN) server with gzip. It just serves up the contents of `./build`.
+
+
+
+---
+
+
+## Structure
+
+Apps are built up from simple units of functionality called Components. A Component is responsible for rendering a small part of an application, given some input data called `props`, generally passed in as attributes in JSX. A component can be as simple as:
+
+```js
+class Link extends Component {
+  render({ to, children }) {
+    return <a href={ to }>{ children }</a>;
+  }
+}
+// usage:
+<Link to="/">Home</Link>
+```
+
+
+---
+
+
+## CSS Modules
+
+This project is set up to support [CSS Modules](https://github.com/css-modules/css-modules).  By default, styles in `src/style` are **global** (not using CSS Modules) to make global declarations, imports and helpers easy to declare.  Styles in `src/components` are loaded as CSS Modules via [Webpack's css-loader](https://github.com/webpack/css-loader#css-modules).  Modular CSS namespaces class names, and when imported into JavaScript returns a mapping of canonical (unmodified) CSS classes to their local (namespaced/suffixed) counterparts.
+
+When imported, this LESS/CSS:
+
+```css
+.redText { color:red; }
+.blueText { color:blue; }
+```
+
+... returns the following map:
+
+```js
+import styles from './style.css';
+console.log(styles);
+// {
+//   redText: 'redText_local_9gt72',
+//   blueText: 'blueText_local_9gt72'
+// }
+```
+
+Note that the suffix for local classNames is generated based on an md5 hash of the file. Changing the file changes the hash.
+
+
+---
+
+
+## Handling URLS
+
+:information_desk_person: This project contains a basic two-page app with [URL routing](http://git.io/preact-router).
+
+Pages are just regular components that get mounted when you navigate to a certain URL. Any URL parameters get passed to the component as `props`.
+
+Defining what component(s) to load for a given URL is easy and declarative. You can even mix-and-match URL parameters and normal props.
+
+```js
+<Router>
+  <A path="/" />
+  <B path="/b" id="42" />
+  <C path="/c/:id" />
+</Router>
+```
+
+
+---
+
+
+## License
+
+MIT
+
+
+[Preact]: https://developit.github.io/preact
+[webpack]: https://webpack.github.io

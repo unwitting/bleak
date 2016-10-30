@@ -1,0 +1,49 @@
+@import '~style/helpers';
+
+.container {
+
+  width: 100%;
+  text-align: center;
+
+  margin: 2rem 0;
+
+  .button {
+
+    width: 100%;
+
+    padding: 0 2rem;
+
+    height: 3rem;
+    line-height: 3rem;
+    @media screen and (min-width: @breakpoint-mobile) {
+      height: 4.5rem;
+      line-height: 4.5rem;
+    }
+
+    border: none;
+    border-radius: 3px;
+
+    font: inherit;
+    outline: none;
+
+    cursor: pointer;
+
+    &.happy {
+      background-color: @color-happy;
+      color: white;
+      &:hover {
+        background-color: lighten(@color-happy, 10%);
+      }
+    }
+
+    &.joyful {
+      background-color: @color-joyful;
+      color: white;
+      &:hover {
+        background-color: lighten(@color-joyful, 10%);
+      }
+    }
+
+  }
+
+}
