@@ -58,8 +58,8 @@ export default class Home extends Component {
 
 				</div>
 
-				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_index_page.png`} target='_blank'>
-					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_index_page.png`}/>
+				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io/bleak' : ''}/assets/img/screenshot_index_page.png`} target='_blank'>
+					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io/bleak' : ''}/assets/img/screenshot_index_page.png`}/>
 				</a>
 
 				<div class={style.content}>
@@ -117,8 +117,8 @@ export default class Home extends Component {
 
 				</div>
 
-				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_post_page.png`} target='_blank'>
-					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_post_page.png`}/>
+				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io/bleak' : ''}/assets/img/screenshot_post_page.png`} target='_blank'>
+					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io/bleak' : ''}/assets/img/screenshot_post_page.png`}/>
 				</a>
 
 				<div class={style.content}>
