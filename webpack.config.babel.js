@@ -96,7 +96,8 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: './index.html',
-			minify: { collapseWhitespace: true }
+			minify: { collapseWhitespace: false },
+			inject: false,
 		})
 	]).concat(ENV==='production' ? [
 		new webpack.optimize.OccurenceOrderPlugin()
