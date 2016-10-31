@@ -1,7 +1,11 @@
 <div class="sidebar">
 
   {{#if @blog.logo}}
-  <a href="/"><div class="logo" style="background-image: url({{@blog.logo}})"></div></a>
+    {{#is "amp"}}
+    <amp-img src="{{@blog.logo}}" width="100" height="100" layout="responsive"></amp-img>
+    {{else}}
+    <img src="{{@blog.logo}}" class="logo" width="100%"></img>
+    {{/is}}
   {{/if}}
 
   <div class="title">
@@ -16,14 +20,3 @@
   {{>social_links}}
 
 </div>
-
-<script>
-function resizeLogo() {
-  var logo = $('.sidebar .logo');
-  logo.css('height', logo.width() / 1.61803 + 'px');
-}
-$(resizeLogo);
-$(function () {
-  $(window).resize(resizeLogo);
-});
-</script>

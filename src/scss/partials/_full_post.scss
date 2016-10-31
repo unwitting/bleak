@@ -6,6 +6,12 @@
   background-color: white;
 
   .cover {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     min-height: 10rem;
 
@@ -18,19 +24,11 @@
       padding: 2rem;
     }
 
-    text-transform: lowercase;
-
-    &.cover-image {
-      color: white;
-    }
+    color: white;
     &.text-only {
-      border-bottom: 1px solid #000;
+      background-color: #2ec4ff;
     }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     box-sizing: border-box;
@@ -72,6 +70,23 @@
     a {
       font-weight: 400;
       text-decoration: underline;
+    }
+
+    blockquote:not(.twitter-tweet) {
+      font-size: 1.15em;
+      padding-left: 1rem;
+      border-left: 4px solid currentColor;
+      @include mq-vertical-layout {
+        margin: 0 0 1rem 0;
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .twitter-tweet {
+      margin: 0 auto;
+      padding: 1rem 0;
     }
 
     .date {
