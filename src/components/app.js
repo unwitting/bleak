@@ -19,9 +19,9 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<Header />
-				<Router onChange={this.handleRoute} path="/bleak">
-					<Home path="/" />
-					<Get path="/get" />
+				<Router onChange={this.handleRoute}>
+					<Home path="/bleak" />
+					<Get path="/bleak/get" />
 				</Router>
 			</div>
 		);
