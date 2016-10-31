@@ -30,7 +30,7 @@
 
   <div class="content">
     {{#is "post"}}{{>full_post_date}}{{/is}}
-    {{content}}
+    {{#is "amp"}}{{amp_content}}{{else}}{{content}}{{/is}}
   </div>
   {{#is "post"}}{{>share_toolbar}}{{/is}}
   <div class="content">
