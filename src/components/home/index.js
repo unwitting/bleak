@@ -56,6 +56,14 @@ export default class Home extends Component {
 					<p>This tracking helps me, the developer, measure its reach and usage, assess the uptake of new features and the kinds of device it's being used on.</p>
 					<p><b>You can opt out of this</b>. That's totally fine - the tracking-less version is exactly the same in every other way. Thanks for reading ❤.</p>
 
+				</div>
+
+				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_index_page.png`} target='_blank'>
+					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_index_page.png`}/>
+				</a>
+
+				<div class={style.content}>
+
 					<h2>configure</h2>
 
 					<p>Configuration of <b>bleak</b> can all be done inside the Ghost admin screens at <code>/ghost</code>.</p>
@@ -106,6 +114,14 @@ export default class Home extends Component {
 					<p>To integrate a bleak blog with Disqus, you just need a Disqus username. Drop it into your configuration with this one line in the header code injection interface:</p>
 
 					<p><code>&lt;script&gt; window.__themeCfg.disqusUsername = 'mydisqususername'; &lt;/script&gt;</code></p>
+
+				</div>
+
+				<a href={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_post_page.png`} target='_blank'>
+					<img src={`${process.env.NODE_ENV === 'production' ? '//unwitting.github.io' : ''}/assets/img/screenshot_post_page.png`}/>
+				</a>
+
+				<div class={style.content}>
 
 					<h2>that's it</h2>
 
