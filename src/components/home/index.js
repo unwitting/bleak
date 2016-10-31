@@ -3,6 +3,7 @@ import { Link } from 'preact-router';
 import style from './style';
 import c from 'classnames';
 
+import Bravenet from '../bravenet'
 import Button from '../button'
 
 export default class Home extends Component {
@@ -130,6 +131,8 @@ export default class Home extends Component {
 					<a href='https://github.com/unwitting/bleak/issues' target='_blank' onClick={this.handleSubmitIssueClick.bind(this)}>
 						<Button type='happy'>submit an issue</Button>
 					</a>
+
+					<Bravenet/>
 
 				</div>
 
