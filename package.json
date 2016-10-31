@@ -8,7 +8,8 @@
     "prestart": "npm run build",
     "build": "cross-env NODE_ENV=production webpack -p --progress",
     "prebuild": "mkdirp build && ncp src/assets build/assets",
-    "lint": "eslint {src}"
+    "lint": "eslint {src}",
+    "gh-pages-publish": "npm run build && git subtree push --prefix build origin gh-pages"
   },
   "author": "Jack Preston <unwttng@gmail.com>",
   "devDependencies": {
