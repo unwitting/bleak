@@ -88,16 +88,15 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new ExtractTextPlugin('style.css', {
 			allChunks: true,
-			disable: ENV!=='production'
 		}),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.DefinePlugin({
 			'process.env': JSON.stringify({ NODE_ENV: ENV })
 		}),
 		new HtmlWebpackPlugin({
-			template: './index.html',
+			template: ENV === 'development'? './index-dev.html': './index.html',
 			minify: { collapseWhitespace: false },
-			inject: false,
+			inject: ENV === 'development',
 		})
 	]).concat(ENV==='production' ? [
 		new webpack.optimize.OccurenceOrderPlugin()

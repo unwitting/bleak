@@ -7,7 +7,12 @@
 	.hero {
 
 		.hero-image;
-		background-image: url(//unwitting.github.io/bleak/assets/img/girl_hair_behind-min.jpeg);
+		&:not(.prod) {
+			background-image: url(/assets/img/girl_hair_behind-min.jpeg);
+		}
+		&.prod {
+			background-image: url(//unwitting.github.io/bleak/assets/img/girl_hair_behind-min.jpeg);
+		}
 
 	}
 
