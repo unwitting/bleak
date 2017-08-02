@@ -1,6 +1,6 @@
 **[Find out more at unwitting.github.io/bleak](http://unwitting.github.io/bleak)**
 
-![bleak](http://i.imgur.com/MJQUkXL.png)
+[![bleak](http://i.imgur.com/MJQUkXL.png)](http://unwitting.github.io/bleak)
 
 # bleak. a theme for ghost [![gtca button](https://img.shields.io/badge/configured%20with-GTCA-brightgreen.svg)](https://github.com/unwitting/gtca)
 
