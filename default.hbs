@@ -26,7 +26,7 @@
           rgba(0, 0, 0, 0.75),
           rgba(0, 0, 0, 0)),
           url(
-            {{#is "tag"}}{{#tag}}{{#if image}}{{image}}{{else}}{{@blog.cover}}{{/if}}{{/tag}}{{/is}}{{#is "index"}}{{@blog.cover}}{{/is}}
+            {{#is "tag"}}{{#tag}}{{#if feature_image}}{{img_url feature_image}}{{else}}{{@blog.cover_image}}{{/if}}{{/tag}}{{/is}}{{#is "index"}}{{@blog.cover_image}}{{/is}}
           )
           center/cover no-repeat;
       }
